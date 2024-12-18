@@ -274,13 +274,6 @@
         <img src="back.png" alt="Игры">
     </button>
 </div>
-
-    <div id="notification" class="notification">
-    <div class="notification-content">
-        <p class="notification-text">Game End!</p>
-        <button onclick="closeNotification()">Close</button>
-    </div>
-</div>
     <script src="telegram-web-app.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -399,11 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dotsCount = 0;
     });
 
-    playButton.addEventListener('click', () => {
-        if (dotsCount >= maxDots) {
-            alert('Игра окончена!');
-            return;
-        }
+    
 
         if (dotsCount < numRows) {
             placeDot(dotsCount);
