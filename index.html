@@ -270,7 +270,7 @@
     <button class="play-button" style="width: 326px;">play</button>
     <button class="reset-button" style="width: 326px;">reset</button>
     <div class="tab">
-    <button class="tablinks games-icon" data-tab="Games" onclick="window.location.href='https://dimazhlby.github.io/gemblbot.main/'">
+    <button class="tablinks games-icon" data-tab="Games" onclick="window.location.href='https://dimazhlby.github.io/gemblbot.main/'">Back
         <img src="back.png" alt="Игры">
     </button>
 </div>
@@ -392,7 +392,11 @@ document.addEventListener('DOMContentLoaded', () => {
         dotsCount = 0;
     });
 
-    
+    playButton.addEventListener('click', () => {
+        if (dotsCount >= maxDots) {
+            alert('Игра окончена!');
+            return;
+        }
 
         if (dotsCount < numRows) {
             placeDot(dotsCount);
